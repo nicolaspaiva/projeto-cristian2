@@ -1,0 +1,21 @@
+.btn-custom{
+    color: #fff;
+    background-color: #9843c3;
+    border-color: #9843c3;
+}
+.btn-custom:hover{
+    background-color: #7b30a0;
+    border-color: #7b30a0;
+    color: #fff;
+    text-decoration: none;
+}
+.coins{
+    position: absolute;
+    top: 0;
+    right: 120px;
+    background-color: #9843c3;
+    padding: 2px 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    color: #fff;
+}

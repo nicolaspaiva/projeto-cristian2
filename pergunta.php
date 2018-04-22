@@ -2,7 +2,7 @@
 <div id="background-image-home"></div>
 <form class="form-signin text-center" action="dashboard.php">
     <div class="header-question">
-        <div class="title-category-question">PLANOS</div>
+        <div class="title-category-question">PLANOS - OI FIXO</div>
     </div>
     <div class="question">
         <div class="box-question box-question-1"></div>

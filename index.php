@@ -1,7 +1,14 @@
-<?php include 'header.php'; ?>
+<?php
+include 'header.php';
+$message = '';
+if (isset($_GET['sair'])) {
+    $message = '<div class="alert alert-info">Sessão encerrada.<br>Aguardamos você aqui novamente.<br><b>:D</b></div>';
+}
+?>
 <div id="background-image-home"></div>
 <form class="form-signin text-center" action="dashboard.php">
     <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">
+    <?=$message?>
     <label for="inputEmail" class="sr-only">E-mail</label>
     <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
     <label for="inputPassword" class="sr-only">Senha</label>
