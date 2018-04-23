@@ -1,0 +1,3 @@
+.form-signin{
+    min-height: 650px;
+}
