@@ -4,8 +4,9 @@ const question = (server, db) => {
     const {
       name, description, coin, companyId, difficultyId,
     } = req.params;
+
     try {
-      res.send(await db.questions().save(name, description, coin, companyId, difficultyId));
+      res.send(await db.question().save(name, description, coin, companyId, difficultyId));
     } catch (error) {
       res.send(error);
     }
@@ -17,7 +18,7 @@ const question = (server, db) => {
       id, name, description, coin, companyId, difficultyId,
     } = req.params;
     try {
-      res.send(await db.questions().update(id, name, description, coin, companyId, difficultyId));
+      res.send(await db.question().update(id, name, description, coin, companyId, difficultyId));
     } catch (error) {
       res.send(error);
     }
@@ -27,7 +28,7 @@ const question = (server, db) => {
   server.del('/question', async (req, res, next) => {
     const { id } = req.params;
     try {
-      res.send(await db.questions().del(id));
+      res.send(await db.question().del(id));
     } catch (error) {
       res.send(error);
     }

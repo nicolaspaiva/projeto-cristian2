@@ -29,15 +29,6 @@ const companies = (server, db) => {
     next();
   });
 
-  server.del('/company', async (req, res, next) => {
-    const { id } = req.params;
-    try {
-      res.send(await db.companies().del(id));
-    } catch (error) {
-      res.send(error);
-    }
-    next();
-  });
 };
 
 module.exports = companies;

@@ -2,14 +2,14 @@ CREATE DATABASE IF NOT EXISTS company_questions;
 
 USE company_questions;
 
-CREATE TABLE company
+CREATE TABLE IF NOT EXISTS company
 ( 
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
     CONSTRAINT `company_pk` PRIMARY KEY (`id`)
 );
 
-CREATE TABLE store
+CREATE TABLE IF NOT EXISTS store
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE store
     CONSTRAINT `store_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`)
 );
 
-CREATE TABLE product
+CREATE TABLE IF NOT EXISTS product
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
@@ -28,19 +28,19 @@ CREATE TABLE product
     CONSTRAINT `product_store_fk` FOREIGN KEY ( `store_id` ) REFERENCES store (`id`)
 );
 
-CREATE TABLE user
+CREATE TABLE IF NOT EXISTS user
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `first_name` VARCHAR(20) NOT NULL,
     `last_name` VARCHAR(60) NOT NULL,
     `email` VARCHAR(50) NOT NULL,
-    password VARCHAR(75) NOT NULL,
+    `password` VARCHAR(75) NOT NULL,
     `company_id` INT(11) NOT NULL,
-    CONSTRAINT `user_pk` PRIMARY KEY (`id`)
-    CONSTRAINT `user_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`),
+    CONSTRAINT `user_pk` PRIMARY KEY (`id`),
+    CONSTRAINT `user_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`)
 );
 
-CREATE TABLE difficulty
+CREATE TABLE IF NOT EXISTS difficulty
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(30) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE difficulty
     CONSTRAINT `difficulty_pk` PRIMARY KEY (`id`)
 );
 
-CREATE TABLE adventure
+CREATE TABLE IF NOT EXISTS adventure
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(30) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE adventure
     CONSTRAINT `question_difficulty_fk` FOREIGN KEY ( `difficulty_id` ) REFERENCES difficulty (`id`)
 );
 
-CREATE TABLE question
+CREATE TABLE IF NOT EXISTS question
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(65) NOT NULL,
@@ -69,10 +69,18 @@ CREATE TABLE question
     `company_id` INT(11) NOT NULL,
     `difficulty_id` INT(11) NOT NULL,
     CONSTRAINT `question_pk` PRIMARY KEY (`id`),
-    CONSTRAINT `question_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`),
-    CONSTRAINT `question_difficulty_fk` FOREIGN KEY ( `difficulty_id` ) REFERENCES difficulty (`id`)
+    CONSTRAINT `question_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`)
 );
 
+CREATE TABLE IF NOT EXISTS question_options
+(
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `description` VARCHAR(255) NOT NULL,
+    `correct` BOOLEAN NOT NULL,
+    `question_id` INT(11) NOT NULL,
+    CONSTRAINT `question_options_pk` PRIMARY KEY (`id`),
+    CONSTRAINT `question_options_question_fk` FOREIGN KEY ( `question_id` ) REFERENCES question (`id`)
+);
 
 
 
