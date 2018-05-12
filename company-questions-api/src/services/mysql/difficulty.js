@@ -18,7 +18,7 @@ const difficulty = deps => ({
         errorHandler(error, `Falha ao cadastrar a dificuldade: ${name}`, reject);
         return false;
       }
-      resolve({ category: { name, id: results.insertId } });
+      resolve({ difficulty: { name, id: results.insertId } });
     });
   }),
   update: (id, name) => new Promise((resolve, reject) => {
@@ -29,7 +29,7 @@ const difficulty = deps => ({
         errorHandler(error, `Falha ao atualizar a dificuldade: ${id} : ${name}`, reject);
         return false;
       }
-      resolve({ category: { name, id }, affectedRows: results.affectedRows });
+      resolve({ difficulty: { name, id }, affectedRows: results.affectedRows });
     });
   }),
 });

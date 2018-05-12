@@ -40,6 +40,17 @@ CREATE TABLE IF NOT EXISTS user
     CONSTRAINT `user_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`)
 );
 
+CREATE TABLE IF NOT EXISTS category
+(
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(30) NOT NULL,
+    `color` VARCHAR(10) NOT NULL,
+    `logo` VARCHAR(10) NOT NULL,
+    `company_id` INT(11) NOT NULL,
+    CONSTRAINT `category_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`),
+    CONSTRAINT `category_pk` PRIMARY KEY (`id`)
+);  
+
 CREATE TABLE IF NOT EXISTS difficulty
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -48,14 +59,18 @@ CREATE TABLE IF NOT EXISTS difficulty
     CONSTRAINT `difficulty_pk` PRIMARY KEY (`id`)
 );
 
+
 CREATE TABLE IF NOT EXISTS adventure
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(30) NOT NULL,
     `coin` int(11) NULL,
+    `question_coin` int(11) NULL,
     `company_id` INT(11) NOT NULL,
     `difficulty_id` INT(11) NOT NULL,
+    `category_id` INT(11) NOT NULL,
     CONSTRAINT `adventure_pk` PRIMARY KEY (`id`),
+    CONSTRAINT `adventure_category_fk` FOREIGN KEY ( `category_id` ) REFERENCES category (`id`),
     CONSTRAINT `adventure_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`),
     CONSTRAINT `question_difficulty_fk` FOREIGN KEY ( `difficulty_id` ) REFERENCES difficulty (`id`)
 );
@@ -63,12 +78,12 @@ CREATE TABLE IF NOT EXISTS adventure
 CREATE TABLE IF NOT EXISTS question
 (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(65) NOT NULL,
     `description` VARCHAR(255) NOT NULL,
-    `coin` int(11) NULL,
     `company_id` INT(11) NOT NULL,
     `difficulty_id` INT(11) NOT NULL,
+    `adventure_id` INT(11) NOT NULL,
     CONSTRAINT `question_pk` PRIMARY KEY (`id`),
+    CONSTRAINT `question_adventure_fk` FOREIGN KEY ( `adventure_id` ) REFERENCES adventure (`id`),
     CONSTRAINT `question_company_fk` FOREIGN KEY ( `company_id` ) REFERENCES company (`id`)
 );
 

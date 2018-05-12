@@ -1,43 +1,71 @@
 
+const PATH = '/adventure';
+
 const adventure = (server, db) => {
-  server.get('/adventure', async (req, res, next) => {
+  server.get(PATH, async (req, res, next) => {
     const { companyId } = req.params;
     try {
-      res.send(await db.adventures().all(companyId));
+      res.send(await db.adventure().all(companyId));
     } catch (error) {
       res.send(error);
     }
     next();
   });
 
-  server.post('/adventure', async (req, res, next) => {
+  server.post(PATH, async (req, res, next) => {
     const {
-      companyId, difficultyId, name, coin,
+      name,
+      coin,
+      question_coin: questionCoin,
+      company_id: companyId,
+      difficulty_id: difficultyId,
+      category_id: categoryId,
     } = req.params;
     try {
-      res.send(await db.adventures().save(companyId, difficultyId, name, coin));
+      res.send(await db.adventure().save(
+        name,
+        coin,
+        questionCoin,
+        companyId,
+        difficultyId,
+        categoryId,
+      ));
     } catch (error) {
       res.send(error);
     }
     next();
   });
 
-  server.put('/adventure', async (req, res, next) => {
+  server.put(PATH, async (req, res, next) => {
     const {
-      id, companyId, difficultyId, name, coin,
+      id,
+      name,
+      coin,
+      question_coin: questionCoin,
+      company_id: companyId,
+      difficulty_id: difficultyId,
+      category_id: categoryId, 
     } = req.params;
     try {
-      res.send(await db.adventures().update(id, companyId, difficultyId, name, coin));
+      res.send(await db.adventure().update(
+        id,
+        name,
+        coin,
+        questionCoin,
+        companyId,
+        difficultyId,
+        categoryId
+      ));
     } catch (error) {
       res.send(error);
     }
     next();
   });
 
-  server.del('/adventure', async (req, res, next) => {
+  server.del(PATH, async (req, res, next) => {
     const { id } = req.params;
     try {
-      res.send(await db.adventures().del(id));
+      res.send(await db.adventure().del(id));
     } catch (error) {
       res.send(error);
     }

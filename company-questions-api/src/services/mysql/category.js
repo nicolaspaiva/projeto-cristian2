@@ -1,30 +1,32 @@
-const categories = deps => ({
+const category = deps => ({
   all: () => new Promise((resolve, reject) => {
     const { connection, errorHandler } = deps;
 
-    connection.query('SELECT * FROM categories', (error, results) => {
+    connection.query('SELECT * FROM category', (error, results) => {
       if (error) {
         errorHandler(error, 'Falha ao listar as categorias', reject);
         return false;
       }
-      resolve({ categories: results });
+      resolve({ category: results });
     });
   }),
-  save: name => new Promise((resolve, reject) => {
+  save: (name, color, logo, companyId) => new Promise((resolve, reject) => {
     const { connection, errorHandler } = deps;
 
-    connection.query('INSERT INTO categories (name) VALUES (?)', [name], (error, results) => {
+    connection.query('INSERT INTO category (name, color, logo, company_id) VALUES (?, ?, ?, ?)', 
+      [ name, color, logo, companyId ], (error, results) => {
+      
       if (error) {
         errorHandler(error, `Falha ao cadastrar a categoria: ${name}`, reject);
         return false;
       }
-      resolve({ category: { name, id: results.insertId } });
+      resolve({ category: { name, color, logo, companyId, id: results.insertId } });
     });
   }),
   update: (id, name) => new Promise((resolve, reject) => {
     const { connection, errorHandler } = deps;
 
-    connection.query('UPDATE categories SET name = ? WHERE id = ?', [name, id], (error, results) => {
+    connection.query('UPDATE category SET name = ? WHERE id = ?', [name, id], (error, results) => {
       if (error) {
         errorHandler(error, `Falha ao atualizar a categoria: ${id} : ${name}`, reject);
         return false;
@@ -34,7 +36,7 @@ const categories = deps => ({
   }),
   del: id => new Promise((resolve, reject) => {
     const { connection, errorHandler } = deps;
-    connection.query('DELETE FROM categories WHERE id = ?', [id], (error, results) => {
+    connection.query('DELETE FROM category WHERE id = ?', [id], (error, results) => {
       if (error || !results.affectedRows) {
         errorHandler(error, `Falha ao remover a categoria de id: ${id}`, reject);
         return false;
@@ -45,4 +47,4 @@ const categories = deps => ({
 
 });
 
-module.exports = categories;
+module.exports = category;
