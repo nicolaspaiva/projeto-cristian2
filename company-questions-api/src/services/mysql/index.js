@@ -17,6 +17,8 @@ const authModule = require('./auth')({ connection, errorHandler });
 const companiesModule = require('./companies')({ connection, errorHandler });
 const difficultyModule = require('./difficulty')({ connection, errorHandler });
 const questionModule = require('./question')({ connection, errorHandler });
+const categoryModule = require('./category')({ connection, errorHandler });
+const adventureModule = require('./adventure')({ connection, errorHandler });
 
 module.exports = {
   users: () => userModule,
@@ -24,4 +26,6 @@ module.exports = {
   companies: () => companiesModule,
   difficulty: () => difficultyModule,
   question: () => questionModule,
+  category: () => categoryModule,
+  adventure: () => adventureModule,
 };

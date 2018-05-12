@@ -10,26 +10,43 @@ const adventure = deps => ({
       resolve({ adventure: results });
     });
   }),
-  save: name => new Promise((resolve, reject) => {
+  save: (
+    name,
+    coin,
+    questionCoin,
+    companyId,
+    difficultyId,
+    categoryId,
+  ) => new Promise((resolve, reject) => {
     const { connection, errorHandler } = deps;
 
-    connection.query('INSERT INTO adventure (name) VALUES (?)', [name], (error, results) => {
+    connection.query('INSERT INTO adventure (name, coin, question_coin, company_id, difficulty_id, category_id) VALUES (?, ?, ?, ?, ?, ?)',
+      [name, coin, questionCoin, companyId, difficultyId, categoryId], (error, results) => {
       if (error) {
         errorHandler(error, `Falha ao cadastrar a aventura: ${name}`, reject);
         return false;
       }
-      resolve({ category: { name, id: results.insertId } });
+      resolve({ adventure: {name, coin, questionCoin, companyId, difficultyId, categoryId, id: results.insertId } });
     });
   }),
-  update: (id, name) => new Promise((resolve, reject) => {
+  update: (
+    id,
+    name,
+    coin,
+    questionCoin,
+    companyId,
+    difficultyId,
+    categoryId,
+  ) => new Promise((resolve, reject) => {
     const { connection, errorHandler } = deps;
 
-    connection.query('UPDATE adventure SET name = ? WHERE id = ?', [name, id], (error, results) => {
+    connection.query('UPDATE adventure SET name = ?, coin = ?, question_coin = ?, company_id = ?, difficulty_id = ?,  category_id = ?, WHERE id = ?', 
+      [name, coin, questionCoin, companyId, difficultyId, categoryId, id], (error, results) => {
       if (error) {
         errorHandler(error, `Falha ao atualizar a aventura: ${id} : ${name}`, reject);
         return false;
       }
-      resolve({ category: { name, id }, affectedRows: results.affectedRows });
+      resolve({ adventure: {name, coin, questionCoin, companyId, difficultyId, categoryId, id}, affectedRows: results.affectedRows });
     });
   }),
   del: id => new Promise((resolve, reject) => {

@@ -8,6 +8,7 @@ const product = require('./product');
 const question = require('./question');
 const store = require('./store');
 const user = require('./user');
+const category = require('./category');
 
 const routes = (server) => {
   server.get('/', (req, res, next) => {
@@ -32,6 +33,7 @@ const routes = (server) => {
   question(server, db);
   store(server, db);
   user(server, db);
+  category(server, db);
 };
 
 module.exports = routes;
