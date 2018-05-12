@@ -1,0 +1,67 @@
+body{
+    background-image: url('../images/praia/fundo-praia.png');
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+    height: 100vh;
+}
+#principais-ofertas{
+    /* background-image: url('../images/praia/prancha.png'); */
+    padding-bottom: 0;
+    padding: 50px;
+    margin: 0;
+    width: 100%;
+    background-size: 100%;    
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+}
+.oferta{
+    background-image: url(../images/praia/boia.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    background-size: auto 95%;
+    background-position: center;
+    transition: background-size 1s ease-in;
+    -moz-transition: background-size 1s ease-in;
+    -ms-transition: background-size 1s ease-in;
+    -o-transition: background-size 1s ease-in;
+    -webkit-transition: background-size 1s ease-in;
+}
+.oferta:nth-child(2){
+    background-image: url(../images/praia/boia-1.png);
+}
+.oferta:nth-child(3){
+    background-image: url(../images/praia/boia-2.png);
+}
+#sair{
+    background-image: url(../images/praia/chinelo.png);
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 50px;
+    display: block;
+    background-size: contain;
+    position: relative;
+    background-size: 65%;
+    background-position: center left;
+    text-transform: uppercase;
+}
+#sair span{
+    color: #333;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-weight: bold;
+}
+#iniciar-teste{
+    background-image: url(../images/praia/aventura.png);
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    border: none !important;
+    background-size: contain;
+    padding: 0;
+    height: 400px;
+}
+#first-box{
+    margin-top: 150px;
+}

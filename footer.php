@@ -16,6 +16,7 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/sb-admin-2.js"></script>
 <script src="js/esqueci-minha-senha.js"></script>
-<script src="js/perguntas.js"></script>
+<script src="js/perguntas.js"></script>]
+<script src="js/dashboard.js"></script>
 </body>
 </html>
