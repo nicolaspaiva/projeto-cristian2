@@ -1,4 +1,13 @@
-.btn-custom{
+body{
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+}
+
+.cb{
+    clear: both;
+}
+
+/*.btn-custom{
     color: #fff;
     background-color: #9843c3;
     border-color: #9843c3;
@@ -18,4 +27,4 @@
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     color: #fff;
-}
+}*/

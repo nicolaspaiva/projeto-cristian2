@@ -1,0 +1,47 @@
+:root{
+    --main-color: #fff;
+    --secondary-color: #9854ce;
+    --third-color: #8337bf;
+    --border-radius: 3px;
+    --main-color-border: #dedede;
+}
+
+#logo{
+    background-image: url('../images/logo.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    /*background-color: var(--main-color);*/
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    float: left;
+}
+#sair{
+    background-color: var(--secondary-color);
+    display: inline-block;
+    float: right;
+    padding: 5px 20px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    color: #fff;
+    text-decoration: none;
+}
+#sair:hover{          
+    background-color: var(--third-color);
+}
+#coins-header{
+    background-image: url('../images/coin.png');
+    background-position: 10px;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    float: right;
+    margin: 0 80px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
