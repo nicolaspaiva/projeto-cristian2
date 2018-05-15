@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div id="box-logo" class="col-md-6">
             <div id="logo"></div>            
         </div>
         <div class="col-md-6">

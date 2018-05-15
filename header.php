@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">        
         <link rel="stylesheet" href="css/general.css"/>
+        <link rel="stylesheet" href="css/general-praia.css"/>
         <link rel="stylesheet" href="css/header.css"/>
+        <link rel="stylesheet" href="css/header-praia.css"/>
         <?php if ($page == 'index.php' || $page == 'esqueci-minha-senha.php') { ?>
             <link rel="stylesheet" href="css/index.css"/>
         <?php } if ($page == 'pergunta.php') { ?>
@@ -24,6 +26,7 @@
             <link href="css/sb-admin-2.css" rel="stylesheet">
             <link href="css/morris.css" rel="stylesheet">
             <link href="css/dashboard.css" rel="stylesheet">
+            <link href="css/dashboard-praia.css" rel="stylesheet">
         <?php } ?>
         <title>Projeto Cristian</title>
     </head>

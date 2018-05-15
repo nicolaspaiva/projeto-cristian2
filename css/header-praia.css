@@ -1,0 +1,45 @@
+#box-logo{
+    background-image: url('../images/praia/boia.png');
+    background-repeat: no-repeat;
+    background-size: 29%;
+    background-position: 15px -70px;
+}
+#logo{
+    background-image: url('../images/logo.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    /*background-color: var(--main-color);*/
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    float: left;
+}
+#sair{
+    background-color: transparent;
+    display: inline-block;
+    float: right;
+    padding: 5px 20px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    color: #fff;
+    text-decoration: none;
+}
+#sair:hover{          
+    background-color: var(--third-color);
+}
+#coins-header{
+    background-image: url('../images/coin.png');
+    background-position: 18px;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    float: right;
+    margin: 0 80px;
+    padding: 9px 18px;
+    padding-left: 41px;
+    color: #fff;
+    background-color: #b8e2e7;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
