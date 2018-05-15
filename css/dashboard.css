@@ -50,14 +50,14 @@
     height: 70px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: bottom;
     position: relative;
 }
 .medal._1{
-    background-image: url('../images/medalha-1.png');
+    background-image: url('../images/medalha-2.png');
 }
 .medal._2{
-    background-image: url('../images/medalha-2.png');
+    background-image: url('../images/medalha-1.png');
 }
 .medal._3{
     background-image: url('../images/medalha-3.png');

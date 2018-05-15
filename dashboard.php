@@ -3,17 +3,18 @@
     <div class="row">
         <div  class="col-md-5">
             <div id="profile">
+                <div id="complement-theme"></div>
                 <div class="row">
                     <div class="col-md-4">
                         <div id="image"></div>                
                     </div>
-                    <div class="col-md-8">
+                    <div id="info-profile" class="col-md-8">
                         <div id="name">Nícolas Paiva</div>
                         <div id="level">GOLD 1</div>
                         <div id="info-level-progress">17/20 aventuras realizadas</div>
                         <div id="level-progress"><div id="real-progress-level" class="_50"></div></div>
                         <div class="col-md-12">
-                            <div class="row">
+                            <div id="row-medals" class="row">
                                 <div class="medal _1"></div>
                                 <div class="medal _2"></div>
                                 <div class="medal _3"></div>

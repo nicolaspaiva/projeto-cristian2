@@ -1,0 +1,72 @@
+#image{
+    margin-top: 20px;
+}
+#row-medals{
+    background-image: url('../images/inverno/borda-hudskin.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    padding-bottom: 15px;
+}
+#profile{
+    background-image: url('../images/inverno/fundo-hudskin.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    background-position: 0px -180px;
+    position: relative;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+#info-profile{
+    background-image: url('../images/inverno/placa-profile.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 80% 90%;
+    padding-top: 30px;
+}
+#name, #level, #info-level-progress{
+    color: #fff;
+    padding-right: 10px;
+}
+#info-level-progress{
+    margin-top: 0;
+}
+#real-progress-level{
+    background-color: #93c8d0;
+}
+#level-progress{
+    width: 71%;
+    margin-left: 25%;
+    background-color: #fff;
+}
+#complement-theme{
+    background-image: url('../images/inverno/borda-topo-hudskin.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    width: 200px;
+    height: 100px;
+}
+.medal .disabled{
+    opacity: 0;
+}
+#start-adventure{
+    margin-top: 40px;
+    height: 262px;
+    background-color: transparent;
+    background-image: url('../images/inverno/aventura.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    border: none;
+}
+#start-adventure:hover{
+    background-color: transparent;
+}
+#start-adventure span{
+    display: none;
+}
