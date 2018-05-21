@@ -1,0 +1,13 @@
+#perfil-form{
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 40px;
+}
+#perfil-form #title-form{
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+#perfil-form button{
+    float: right;
+}

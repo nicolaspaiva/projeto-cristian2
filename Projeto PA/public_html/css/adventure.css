@@ -1,0 +1,109 @@
+:root{
+    --padding-adventures: 15px;
+}
+#box-adventures .adventure{
+    min-height: 400px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    position: relative;
+}
+#box-adventures .adventure .title-adventure{
+    background-color: #eaeaea;
+    color: #333;
+    font-weight: bold;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-align: center;
+    border-bottom: 1px solid #dedede;
+    padding: var(--padding-adventures);
+}
+#box-adventures .adventure .img-adventure{
+    width: 100%;
+    height: 135px;
+    background-image: url(../img/background-adventure-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#box-adventures .adventure .icon-adventure{
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/icon-adventure-1.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    position: absolute;
+    top: 175px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 100px;
+    border: 2px solid #dedede;
+}
+#box-adventures .adventure .box-coins-adventure{
+    margin-top: 50px;
+    text-align: center;    
+    font-weight: bold;
+}
+#box-adventures .adventure .box-coins-adventure .total-coins{
+    font-size: 16px;
+    margin-bottom: 0;
+    display: inline-block;
+    padding-left: 18px;
+    background-image: url(../img/coin.png);
+    background-repeat: no-repeat;
+    background-size: auto 65%;
+    background-position: left;
+}
+#box-adventures .adventure .box-coins-adventure .parcial-coins{
+    font-weight: 100;
+    font-size: 11px;
+}
+#box-adventures .adventure .box-button{
+    width: 100%;
+    padding: 15px;
+}
+#box-adventures .adventure .box-button a{
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    line-height: 28px;
+    width: 100%;
+    background-color: #0a9f0a;
+    text-align: center;
+    border: 1px solid #067c06;
+    border-bottom: 2px solid #067c06;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 20px;    
+}
+#box-adventures .adventure .box-button a:hover{
+    background-color: #067c06;
+}
+#box-adventures .adventure .box-button .bar-level-adventure{
+    margin: 0 auto;
+    width: 90%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #868686;
+    margin-top: 5px;
+}
+#box-adventures .adventure .box-button .bar-level-adventure .bar-level-adventure-real{
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
+    background-color: #5f5f5f;
+}
+#box-adventures .adventure .box-button p{
+    width: 100%;
+    display: block;
+    margin-top: 2px;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 20px;
+}

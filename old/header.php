@@ -24,12 +24,14 @@
             <link rel="stylesheet" href="css/pergunta.css"/>
         <?php } if ($page == 'loja.php') { ?>
             <link rel="stylesheet" href="css/loja.css"/>
-        <?php } if ($page == 'dashboard.php') { ?>
+        <?php } if ($page == 'dashboard.php' || $page == 'perfil.php') { ?>
             <link href="css/sb-admin-2.css" rel="stylesheet">
             <link href="css/morris.css" rel="stylesheet">
             <link href="css/dashboard.css" rel="stylesheet">
             <!--<link href="css/dashboard-praia.css" rel="stylesheet">-->
             <link href="css/dashboard-inverno.css" rel="stylesheet">
+        <?php } if ($page == 'dashboard.php' || $page == 'perfil.php') { ?>
+            <link href="css/perfil-inverno.css" rel="stylesheet">
         <?php } ?>
         <title>Projeto Cristian</title>
     </head>

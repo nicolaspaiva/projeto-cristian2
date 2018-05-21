@@ -1,0 +1,65 @@
+#profile{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-color: #eaeaea;
+}
+#image{
+    background-image: url('../img/homem-1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 69px;
+    height: 198px;
+}
+#name{
+    text-align: right;
+    font-weight: 600;
+}
+#level{
+    text-align: right;
+    font-size: 15px;
+    font-weight: 100;
+}
+#info-level-progress{
+    margin-top: 15px;
+    text-align: right;
+    font-size: 13px;
+}
+#level-progress{
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    margin-bottom: 30px;    
+}
+#real-progress-level{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.medal{
+    width: 48px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: relative;
+}
+.medal._1{
+    background-image: url('../img/medalha-2.png');
+}
+.medal._2{
+    background-image: url('../img/medalha-1.png');
+}
+.medal._3{
+    background-image: url('../img/medalha-3.png');
+}
+.medal._4{
+    background-image: url('../img/medalha-4.png');
+}
+.medal._5{
+    background-image: url('../img/medalha-5.png');
+}
