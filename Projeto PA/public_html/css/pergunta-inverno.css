@@ -1,0 +1,6 @@
+#background-image-home{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ),url('../img/background-winter.jpg');
+}
+.header-question{
+    background-color: #60a9c2;
+}

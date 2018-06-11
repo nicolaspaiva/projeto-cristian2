@@ -1,25 +1,25 @@
-#hot-offers .box-offer{
+.box-offer{
     background-color: #f5f5f5;
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #eaeaea;
     min-height: 250px;
 }
-#hot-offers .box-offer h2{
+.box-offer h2{
     font-weight: bold;
     font-size: 20px;
     text-transform: uppercase;
     margin: 0;
 }
-#hot-offers .box-offer img{
+.box-offer img{
     margin: 10px auto;
     display: block;
     height: 100px;
 }
-#hot-offers .box-offer p{
+.box-offer p{
     text-align: center;
     margin-top: 20px;
 }
-#hot-offers .box-offer button{
+.box-offer button{
     width: 100%;
 }

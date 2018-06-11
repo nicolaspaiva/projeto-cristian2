@@ -2,7 +2,7 @@
     background-image: url(../img/background-winter.png);
 }
 #canv{
-    width: 100%;
+    width: 50%;
     height: 50%;
     position: absolute;
     top: 0;
@@ -90,4 +90,7 @@ hr{
 }
 #perfil-info button:hover, #box-adventures .adventure .box-button a:hover{
     background-color: #3d8ca7;
+}
+.title-section{
+    color: #3b87a0;
 }
